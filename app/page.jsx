@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Starfield from '@/components/Starfield';
 import QuoteRotator from '@/components/QuoteRotator';
 import Countdown from '@/components/Countdown';
-import { topicLabels, getTotalTopics } from '@/lib/topics';
+import { topicLabels, topicFunnyLines, topicPainRatings, getTotalTopics } from '@/lib/topics';
 
 export default function Home() {
   const totalTopics = getTotalTopics();
@@ -104,11 +104,14 @@ export default function Home() {
                   {totalTopics > 0 ? 'of ' + totalTopics : ''}
                 </span>
               </div>
-              <h3 style={{ fontSize: '1.1rem', marginBottom: '0.5rem', color: 'var(--color-text-primary)' }}>
+              <h3 style={{ fontSize: '1.1rem', marginBottom: '0.4rem', color: 'var(--color-text-primary)' }}>
                 {topicLabels[num] || `Topic ${num}`}
               </h3>
+              <p style={{ fontSize: '0.8rem', color: 'var(--color-text-tertiary)', marginBottom: '0.5rem', fontStyle: 'italic', margin: '0 0 0.5rem 0' }}>
+                {topicFunnyLines[num]}
+              </p>
               <p style={{ fontSize: '0.85rem', color: 'var(--color-text-secondary)', margin: 0 }}>
-                Click to explore →
+                {topicPainRatings[num]} · Click to explore →
               </p>
             </Link>
           ))}
