@@ -50,9 +50,11 @@ export default function Countdown() {
       <p style={{ fontSize: '0.85rem', color: 'var(--color-text-tertiary)', margin: 0 }}>
         {timeLeft}
       </p>
-      <p style={{ fontSize: '0.9rem', color: 'var(--color-border-secondary)', fontWeight: 600, margin: '0.5rem 0 0' }}>
-        {panicLevel}
-      </p>
+      {panicLevel && (
+        <p style={{ fontSize: '0.9rem', color: 'var(--color-border-secondary)', fontWeight: 600, margin: '0.5rem 0 0' }}>
+          {panicLevel}
+        </p>
+      )}
     </>
   );
 }

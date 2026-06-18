@@ -25,15 +25,19 @@ export default function ChaosQuotes() {
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
+    let timeoutId;
     const interval = setInterval(() => {
       setVisible(false);
-      setTimeout(() => {
+      timeoutId = setTimeout(() => {
         setIndex((prev) => (prev + 1) % chaosQuotes.length);
         setVisible(true);
       }, 500);
     }, 8000);
 
-    return () => clearInterval(interval);
+    return () => {
+      clearInterval(interval);
+      clearTimeout(timeoutId);
+    };
   }, []);
 
   return (
