@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Starfield from '@/components/Starfield';
 import QuoteRotator from '@/components/QuoteRotator';
+import Countdown from '@/components/Countdown';
 import { topicLabels, getTotalTopics } from '@/lib/topics';
 
 export default function Home() {
@@ -118,6 +119,7 @@ export default function Home() {
           <p style={{ fontSize: '0.85rem', color: 'var(--color-text-tertiary)' }}>
             XAI Learning Materials · Hochschule Karlsruhe · Summer 2026
           </p>
+          <Countdown />
         </div>
       </div>
     </div>
