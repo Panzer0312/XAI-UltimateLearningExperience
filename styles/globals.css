@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Background */
+  --color-background-primary: #0f1419;
+  --color-background-secondary: #1a1f2e;
+  --color-background-tertiary: #252d3d;
+
+  /* Text */
+  --color-text-primary: #e8eaed;
+  --color-text-secondary: #9ca3af;
+  --color-text-tertiary: #6b7280;
+
+  /* Borders */
+  --color-border-primary: #00d9ff;    /* Cyan neon */
+  --color-border-secondary: #ff00ff;  /* Magenta neon */
+  --color-border-tertiary: #3f4657;
+
+  /* Rainbow accent gradient */
+  --color-accent-rainbow: linear-gradient(90deg, #00d9ff, #ff00ff, #ffff00);
+
+  /* Topic-specific accents */
+  --color-accent-purple: #7B44CC;
+  --color-accent-purple-light: #A47FE8;
+  --color-accent-green: #22C55E;
+  --color-accent-red: #EF4444;
+  --color-accent-amber: #F59E0B;
+
+  /* Spacing & Typography */
+  --border-radius-sm: 4px;
+  --border-radius-md: 6px;
+  --border-radius-lg: 12px;
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-background-primary);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Glow effect for neon elements */
+.neon-glow {
+  text-shadow: 0 0 10px currentColor;
+}
+
+/* Button base styling */
+button {
+  font-family: var(--font-sans);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+/* Links */
+a {
+  color: var(--color-border-primary);
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+a:hover {
+  text-shadow: 0 0 10px var(--color-border-primary);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-background-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-primary);
+  border-radius: var(--border-radius-md);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-border-secondary);
+}
+
+/* Rainbow gradient text effect */
+.rainbow-text {
+  background: var(--color-accent-rainbow);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Neon glow effect */
+.neon-border {
+  border-color: var(--color-border-primary);
+  box-shadow: 0 0 15px rgba(0, 217, 255, 0.3);
+  transition: all 0.15s;
+}
+
+.neon-border:hover {
+  border-color: var(--color-border-secondary);
+  box-shadow: 0 0 25px rgba(255, 0, 255, 0.5);
+}
+
+/* Smooth transitions */
+* {
+  transition: border-color 0.15s, box-shadow 0.15s, color 0.15s;
+}
