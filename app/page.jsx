@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Starfield from '@/components/Starfield';
-import QuoteRotator from '@/components/QuoteRotator';
+import ChaosQuotes from '@/components/ChaosQuotes';
 import Countdown from '@/components/Countdown';
 import { topicLabels, topicFunnyLines, topicPainRatings, getTotalTopics } from '@/lib/topics';
 
@@ -52,7 +52,7 @@ export default function Home() {
         </div>
 
         {/* Quote Rotator */}
-        <QuoteRotator />
+        <ChaosQuotes />
 
         {/* Topic Grid */}
         <div
