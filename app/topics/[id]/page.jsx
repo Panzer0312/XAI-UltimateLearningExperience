@@ -10,6 +10,8 @@ import * as Topic5 from '@/content/xai_lernkarten_5';
 import * as Topic6 from '@/content/xai_lernkarten_6';
 import * as Topic7 from '@/content/xai_lernkarten_7';
 import * as Topic8 from '@/content/xai_lernkarten_8';
+import * as Topic9 from '@/content/xai_lernkarten_9';
+import * as Topic10 from '@/content/xai_lernkarten_10';
 import { isValidTopicId, getTotalTopics } from '@/lib/topics';
 import NavBar from '@/components/NavBar';
 
@@ -22,6 +24,8 @@ const topicModules = {
   6: Topic6,
   7: Topic7,
   8: Topic8,
+  9: Topic9,
+  10: Topic10,
 };
 
 export default function TopicPage() {

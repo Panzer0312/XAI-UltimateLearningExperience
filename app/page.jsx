@@ -54,6 +54,46 @@ export default function Home() {
         {/* Quote Rotator */}
         <ChaosQuotes />
 
+        {/* Klausur Banner */}
+        <div style={{ marginTop: '2.5rem' }}>
+          <Link
+            href="/klausur"
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              padding: '1.25rem 1.75rem',
+              background: 'linear-gradient(135deg, rgba(83,74,183,0.15), rgba(15,110,86,0.15))',
+              border: '1.5px solid rgba(83,74,183,0.5)',
+              borderRadius: 'var(--border-radius-lg)',
+              textDecoration: 'none',
+              color: 'var(--color-text-primary)',
+              transition: 'all 0.15s',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.borderColor = 'rgba(83,74,183,0.9)';
+              e.currentTarget.style.boxShadow = '0 0 24px rgba(83,74,183,0.3)';
+              e.currentTarget.style.transform = 'translateY(-2px)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.borderColor = 'rgba(83,74,183,0.5)';
+              e.currentTarget.style.boxShadow = 'none';
+              e.currentTarget.style.transform = 'translateY(0)';
+            }}
+          >
+            <div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '0.3rem' }}>
+                <span style={{ fontSize: '1.4rem' }}>🎯</span>
+                <h3 style={{ margin: 0, fontSize: '1.2rem', fontWeight: 600, color: '#534AB7' }}>Klausur-Vorbereitung</h3>
+              </div>
+              <p style={{ margin: 0, fontSize: '0.85rem', color: 'var(--color-text-secondary)' }}>
+                Mündliche Prüfung 29. Juni – 3. Juli 2026 · Beispielfragen für alle Themen · Thought Experiments
+              </p>
+            </div>
+            <span style={{ fontSize: '1.5rem', color: '#534AB7' }}>→</span>
+          </Link>
+        </div>
+
         {/* Topic Grid */}
         <div
           style={{
